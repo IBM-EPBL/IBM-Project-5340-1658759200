@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>University Eligibility Predictor</title>
+    
+</head>
+
+<body>
+    <h1 class="text-center mt-3">University Eligibility Predictor</h1>
+
+    
+    <div class="heading">
+        <div class="ml-1 p-4" >
+           <!-- <img src="/static/trend.png" alt="like">-->
+            
+        </div>
+        <div class="ml-1  p-4">
+            
+        </div>
+        <div class="ml-2 p-4">
+            
+        </div>
+    </div>
+
+    <div class="col-6 " id="main" >
+        <div class="card p-2 ms-2 my-2" style="background-color: rgb(212, 205, 205);">
+            <div class="card-body" >
+                <h5 class="card-title pb-4 text-center">
+                    Enter the details
+                </h5>
+                <form action="/" method="post"  style="background-color:rgb(212, 205, 205) ;" id="theForm">
+                    <div class="row mb-3">
+                        <label for="gre" class="col-lg-2 col-form-label">GRE Score:</label>
+                        <div class="col-lg-10">
+                            <input type="number" class="form-control" id="gre" name="gre" min="250" max="340" placeholder="250 to 340" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="tofel" class="col-lg-2 col-form-label">TOFEL Score:</label>
+                        <div class="col-lg-10">
+                            <input type="number" class="form-control" id="tofel" name="tofel" min="50" max="120" placeholder="50 to 120" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="university_rating" class="col-lg-2 col-form-label">University Rating:</label>
+                        <div class="col-lg-10">
+                            <input type="number" class="form-control" id="university_rating" step="0.01" name="university_rating" min="1" max="5" placeholder="1 to 5" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="sop" class="col-lg-2 col-form-label">SOP:</label>
+                        <div class="col-lg-10">
+                            <input type="number" class="form-control" id="sop" name="sop" step="0.01" min="1" max="5" placeholder="1 to 5" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="lor" class="col-lg-2 col-form-label">LOR:</label>
+                        <div class="col-lg-10">
+                            <input type="number" class="form-control" id="lor" name="lor" step="0.01" min="1" max="5" placeholder="1 to 5" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="cgpa" class="col-lg-2 col-form-label">CGPA:</label>
+                        <div class="col-lg-10">
+                            <input type="number" class="form-control" id="cgpa" name="cgpa" step="0.01" min="5" max="10" placeholder="5 to 10" required>
+                        </div>
+                    </div>
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-2 pt-0">Research:</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="yes_no_radio" id="gridRadios1" value="1">
+                                <label class="form-check-label" for="yes_no_radio">
+                                    Yes
+                                    </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="yes_no_radio" id="gridRadios2" value="0" checked>
+                                <label class="form-check-label" for="yes_no_radio">
+                                    No
+                                    </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="row lg-3 justify-content-center">
+                        <div class="col-lg-2 mb-2 me-3">
+                            <button type="submit" class="btn btn-primary  m-auto" style="padding:8px 25px; "  id="button">Predict</button>
+                        </div>
+                        
+                </form>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>
